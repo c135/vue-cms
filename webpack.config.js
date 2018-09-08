@@ -34,9 +34,7 @@ module.exports = {
             {test:/\.css$/,use:['style-loader','css-loader'] },
             { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] }, // 处理 less 文件的 loader
             { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }, // 处理 scss 文件的 loader
-            // {test:/\.(png|svg|jpg|gif)$/,use:['file-loader']},
             { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader?limit=7631&name=[hash:8]-[name].[ext]' },
-            // {test: /\.(woff|woff2|eot|ttf|otf)$/,use: ['file-loader']},
             { test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader' }, // 处理 字体文件的 loader
             { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }, // 配置 Babel 来转换高级的ES语法
             { test: /\.vue$/, use: 'vue-loader' } // 处理 .vue 文件的 loader

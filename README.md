@@ -142,11 +142,3 @@ npm i -S mint-ui
 npm install babel-plugin-component -D
 # 相应的配置请看官网
 ```
-
-测试
-
-
-
-测试2
-不知道怎么看历史版本比较
-TEST

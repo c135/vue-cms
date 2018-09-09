@@ -5,14 +5,20 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
+Vue.http.options.root = ' http://localhost:9000';
+
+import moment from 'moment'
+Vue.filter('dataFormat',function(dataStr,pattern = "YYYY-MM-DD HH:mm:ss"){
+  return moment(dataStr).format(pattern)
+})
 
 import './lib/mui/css/mui.css'
 
 import './lib/mui/css/icons-extra.css'
 
 // 按需导入mint-ui组件
-import { Header, Swipe, SwipeItem } from 'mint-ui';
-
+import { Header, Swipe, SwipeItem, Button } from 'mint-ui';
+Vue.component(Button.name, Button);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Header.name, Header);
@@ -30,3 +36,5 @@ var vue = new Vue({
   router
   
 })
+
+// 测试

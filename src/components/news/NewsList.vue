@@ -7,7 +7,7 @@
 						<div class="mui-media-body">
 							<h1>{{item.title}}</h1>
 							<p class="mui-ellipsis">
-                <span>发表时间：{{item.add_time | dataFormat}}</span>
+                <span>发表时间：{{item.add_time | dateFormat}}</span>
                 <span>点击次数：{{item.click}}</span>
               </p>
 						</div>

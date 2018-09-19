@@ -142,3 +142,12 @@ npm i -S mint-ui
 npm install babel-plugin-component -D
 # 相应的配置请看官网
 ```
+
+
+## 移除严格模式
+由于导入了mui.js里面有一些非严格模式的代码，所以需要用插件移除严格模式
+
+```bash
+npm install babel-plugin-transform-remove-strict-mode -D
+
+```
